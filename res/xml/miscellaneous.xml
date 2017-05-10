@@ -30,9 +30,14 @@
         android:summaryOff="@string/summary_dashboard_suggestions_disabled"
         android:defaultValue="true"/>
 
+    <com.awaken.support.preferences.SystemSettingSwitchPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:summary="@string/headset_connect_player_summary"
+        android:defaultValue="false" />
+
     <Preference
         android:key="gaming_mode"
-        android:icon="@drawable/ic_gaming"
         android:fragment="com.awaken.settings.GamingMode"
         android:title="@string/gaming_mode_title"
         android:summary="@string/gaming_mode_summary"
