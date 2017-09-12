@@ -74,4 +74,10 @@
         android:summary="@string/status_bar_battery_text_charging_summary"
         android:defaultValue="true" />
 
+        <Preference
+            android:key="traffic"
+            android:title="@string/traffic_title"
+            android:summary="@string/traffic_summary"
+            android:fragment="com.awaken.settings.NetworkTrafficSettings" />
+
 </PreferenceScreen>
