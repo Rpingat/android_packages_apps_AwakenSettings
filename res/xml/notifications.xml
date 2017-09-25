@@ -108,4 +108,10 @@
 
     </PreferenceCategory>
 
+    <!-- Heads up -->
+    <Preference
+        android:key="heads_up_notifications"
+        android:title="@string/heads_up_notifications"
+        android:fragment="com.awaken.settings.HeadsUpSettings" />
+
 </PreferenceScreen>
