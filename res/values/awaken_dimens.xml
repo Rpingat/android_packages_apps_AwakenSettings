@@ -19,4 +19,7 @@
     <!-- Dashboard tile image margin start / end -->
     <dimen name="dashboard_tile_image_margin">18dp</dimen>
 
+    <!-- Shortcut picker -->
+    <dimen name="shortcut_picker_left_padding">70dip</dimen>
+
 </resources>
