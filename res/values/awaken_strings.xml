@@ -524,7 +524,7 @@
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string>
 
     <!-- Rounded corners -->
-    <string name="corners_category_title">Rounded corners</string>
+    <string name="corners_category_title">Cutout and Rounded corners</string>
     <string name="corners_category_summary">Adjust rounded corners and padding</string>
     <string name="corners_title">Customize rounded corners</string>
     <string name="corner_radius">Rounded corner radius</string>
@@ -695,5 +695,15 @@
     <string name="sb_height_medium">Medium</string>
     <string name="sb_height_large">Large</string>
     <string name="sb_height_extralarge">Extra Large</string>
+
+    <!-- Display cutout options -->
+    <string name="cutout_main">Display Cutout</string>
+    <string name="cutout_main_summary">They really cut corners with this one</string>
+    <string name="display_cutout_style_title">Cutout style</string>
+    <string name="display_cutout_style_normal">Normal</string>
+    <string name="display_cutout_style_immerse">Immerse</string>
+    <string name="display_cutout_style_hide">Hide</string>
+    <string name="stock_statusbar_in_hide">Stock statusbar height</string>
+    <string name="stock_statusbar_in_hide_summary">Use default statusbar height in Hide</string>
 
 </resources>

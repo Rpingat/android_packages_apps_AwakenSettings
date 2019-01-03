@@ -136,6 +136,12 @@
          android:title="@string/corners_category_title">
 
         <PreferenceScreen
+            android:key="cutout_settings"
+            android:title="@string/cutout_main"
+            android:summary="@string/cutout_main_summary"
+            android:fragment="com.awaken.settings.display.CutoutFragment" />
+
+        <PreferenceScreen
             android:key="rounded_corners"
             android:title="@string/corners_title"
             android:summary="@string/corners_category_summary"

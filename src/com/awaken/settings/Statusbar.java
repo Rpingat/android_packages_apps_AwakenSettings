@@ -54,6 +54,7 @@ public class Statusbar extends SettingsPreferenceFragment implements
 
     private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
     private static final String BATTERY_BAR = "statusbar_battery_bar";
+    private static final String PREF_KEY_CUTOUT = "cutout_settings";
 
     private SwitchPreference mUseOldMobileType;
     private SystemSettingMasterSwitchPreference mBatteryBar;
@@ -67,6 +68,8 @@ public class Statusbar extends SettingsPreferenceFragment implements
         PreferenceScreen prefSet = getPreferenceScreen();
 
         ContentResolver resolver = getActivity().getContentResolver();
+
+        Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
 
         mHandler = new Handler();
 
