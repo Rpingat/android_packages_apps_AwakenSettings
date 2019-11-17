@@ -36,4 +36,12 @@
         android:summary="@string/click_partial_screenshot_summary"
         android:defaultValue="false" />
 
+    <com.awaken.support.preferences.SystemSettingMasterSwitchPreference
+        android:key="gaming_mode_enabled"
+        android:icon="@drawable/ic_gaming"
+        android:fragment="com.awaken.settings.GamingMode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
