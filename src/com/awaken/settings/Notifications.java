@@ -44,6 +44,7 @@ import java.util.List;
 
 import com.awaken.support.colorpicker.ColorPickerPreference;
 import com.awaken.support.preferences.SystemSettingSeekBarPreference;
+import com.awaken.support.preferences.SystemSettingSwitchPreference;
 
 @SearchIndexable
 public class Notifications extends SettingsPreferenceFragment
