@@ -37,6 +37,8 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.awaken.settings.display.QsTileStylePreferenceController;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,6 +84,7 @@ public class ThemeSettings extends DashboardFragment {
                 "android.theme.customization.adaptive_icon_shape"));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.icon_pack.android"));
+        controllers.add(new QsTileStylePreferenceController(context));
         return controllers;
     }
 
