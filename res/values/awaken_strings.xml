@@ -540,4 +540,8 @@
     <string name="clock_style_title">Clock style</string>
     <string name="clock_style_summary">Customize lockscreen clock</string>
 
+    <!-- Allow fake signature -->
+    <string name="allow_signature_fake">Allow signature spoofing</string>
+    <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string>
+
 </resources>
