@@ -104,6 +104,23 @@
         android:summary="@string/qs_bg_use_new_tint_summary"
         android:defaultValue="false" />
 
+    <!-- QS status bar opacity -->
+    <com.awaken.support.preferences.SystemSettingSeekBarPreference
+        android:key="qs_sb_bg_alpha"
+        android:title="@string/qs_sb_bg_alpha_title"
+        android:defaultValue="255"
+        android:max="255"
+        android:min="0"
+        settings:units="" />
+
+    <com.awaken.support.preferences.SystemSettingSeekBarPreference
+        android:key="qs_panel_bg_alpha"
+        android:title="@string/qs_panel_alpha_title"
+        android:defaultValue="255"
+        android:max="255"
+        android:min="0"
+        settings:units="" />
+
     </PreferenceCategory>
 
     <!-- Rounded Corners -->

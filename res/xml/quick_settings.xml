@@ -45,14 +45,6 @@
         android:dependency="qs_show_brightness_slider"
         android:defaultValue="false" />
 
-    <com.awaken.support.preferences.SystemSettingSeekBarPreference
-        android:key="qs_panel_bg_alpha"
-        android:title="@string/qs_panel_alpha_title"
-        android:max="255"
-        settings:min="100"
-        settings:interval="5"
-        android:defaultValue="255" />
-
     <com.awaken.support.preferences.SystemSettingListPreference
         android:key="qs_datausage" 
         android:title="@string/qs_datausage_title" 

@@ -575,4 +575,8 @@
     <!-- Lockscreen icons -->
     <string name="lockscreen_tuner_title">Lockscreen Shortcuts</string>
     <string name="lockscreen_tuner_summary">Modify the shortcuts shown in the lockscreen</string>
+
+    <!-- QS status bar background opacity -->
+    <string name="qs_sb_bg_alpha_title">Status bar opacity</string>
+
 </resources>
