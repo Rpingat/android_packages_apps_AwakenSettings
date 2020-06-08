@@ -52,6 +52,14 @@
         android:summary="@string/charging_animation_summary"
         android:defaultValue="true" />
 
+    <com.awaken.support.preferences.SystemSettingListPreference
+        android:key="ambient_music_ticker"
+        android:title="@string/ambient_music_location"
+        android:summary="%s"
+        android:entries="@array/ambient_music_location_entries"
+        android:entryValues="@array/ambient_music_location_values"
+        android:defaultValue="1" />
+
     <!-- FOD customization options -->
     <PreferenceCategory
         android:key="fod_icon_picker"
