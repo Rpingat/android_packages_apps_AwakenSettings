@@ -51,6 +51,12 @@
         settings:interval="5"
         android:defaultValue="255" />
 
+    <com.awaken.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_datausage" 
+        android:title="@string/qs_datausage_title" 
+        android:summary="@string/qs_datausage_subtitle"
+        android:defaultValue="false" />
+
     <!-- Battery mode -->
     <com.awaken.support.preferences.SystemSettingListPreference
         android:key="qs_battery_mode"
