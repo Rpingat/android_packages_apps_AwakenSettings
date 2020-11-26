@@ -42,4 +42,10 @@
         settings:min="0"
         settings:units="" />
 
+    <com.awaken.support.preferences.SystemSettingSwitchPreference
+        android:key="network_traffic_arrow"
+        android:title="@string/network_traffic_arrow"
+        android:summary="@string/network_traffic_arrow_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
