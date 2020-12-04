@@ -52,20 +52,32 @@ public class Notifications extends SettingsPreferenceFragment
     private ColorPickerPreference mEdgeLightColorPreference;
     private SystemSettingSeekBarPreference mEdgeLightDurationPreference;
     private SystemSettingSeekBarPreference mEdgeLightRepeatCountPreference;
+    private SystemSettingSwitchPreference mAmbientPref;
     private ListPreference mColorMode;
 
     private static final String NOTIFICATION_PULSE_COLOR = "ambient_notification_light_color";
     private static final String AMBIENT_LIGHT_DURATION = "ambient_light_duration";
     private static final String AMBIENT_LIGHT_REPEAT_COUNT = "ambient_light_repeat_count";
     private static final String PULSE_COLOR_MODE_PREF = "ambient_notification_light_color_mode";
+    private static final String KEY_AMBIENT = "ambient_notification_light_enabled";
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.notifications);
+        ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefSet = getPreferenceScreen();
         final Resources res = getResources();
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mAmbientPref = (SystemSettingSwitchPreference) findPreference(KEY_AMBIENT);
+        boolean aodEnabled = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.DOZE_ALWAYS_ON, 0, UserHandle.USER_CURRENT) == 1;
+        if (!aodEnabled) {
+            mAmbientPref.setChecked(false);
+            mAmbientPref.setEnabled(false);
+            mAmbientPref.setSummary(R.string.aod_disabled);
+        }
 
         mEdgeLightRepeatCountPreference = (SystemSettingSeekBarPreference) findPreference(AMBIENT_LIGHT_REPEAT_COUNT);
         mEdgeLightRepeatCountPreference.setOnPreferenceChangeListener(this);
