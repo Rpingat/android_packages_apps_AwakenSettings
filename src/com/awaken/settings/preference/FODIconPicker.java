@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.awaken.settings;
+package com.awaken.settings.preference;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
