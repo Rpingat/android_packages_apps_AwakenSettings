@@ -201,11 +201,6 @@
     <string name="summary_dashboard_suggestions_enabled">Dashboard suggestions are enabled</string>
     <string name="summary_dashboard_suggestions_disabled">Dashboard suggestions are disabled</string>
 
-    <!-- Lock screen visualizer -->
-    <string name="lockscreen_visualizer_title">Visualizer</string>
-    <string name="lockscreen_visualizer_enable">Music Visualizer</string>
-    <string name="lockscreen_visualizer_enable_summary">Show visualizer bars while playing music</string>
-
     <!-- Power menu on lockscreen -->
     <string name="lockscreen_power_menu_disabled_title">Disable power menu on lock screen</string>
     <string name="lockscreen_power_menu_disabled_summary">This will only disable the power menu on secure lock screens</string>
