@@ -36,13 +36,6 @@
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
 
-    <com.awaken.support.preferences.SystemSettingListPreference
-        android:key="systemui_plugin_volume"
-        android:title="@string/volume_panel"
-        android:entries="@array/volume_panel_entries"
-        android:entryValues="@array/volume_panel_values"
-        android:defaultValue="@string/volume_panel_stock_val" />
-
     <Preference
         android:key="gaming_mode"
         android:fragment="com.awaken.settings.GamingMode"
