@@ -536,4 +536,8 @@
     <string name="qstile_oos">Oxygen</string>
     <string name="qstile_triangles">Triangle</string>
 
+    <!-- Clock style -->
+    <string name="clock_style_title">Clock style</string>
+    <string name="clock_style_summary">Customize lockscreen clock</string>
+
 </resources>
