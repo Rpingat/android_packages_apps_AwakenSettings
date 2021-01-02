@@ -38,6 +38,7 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.awaken.settings.display.QsTileStylePreferenceController;
+import com.android.settings.display.EnableBlursPreferenceController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +87,7 @@ public class Themes extends DashboardFragment {
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.icon_pack.android"));
         controllers.add(new QsTileStylePreferenceController(context));
+        controllers.add(new EnableBlursPreferenceController(context));
         return controllers;
     }
 
