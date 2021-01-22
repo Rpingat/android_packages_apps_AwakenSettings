@@ -572,4 +572,7 @@
     <string name="switch_telegram">Telegram</string>
     <string name="switch_stockish">Stockish</string>
 
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen Shortcuts</string>
+
 </resources>
