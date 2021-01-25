@@ -40,6 +40,7 @@ import android.widget.EditText;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.awaken.support.preferences.SystemSettingSwitchPreference;
+import com.awaken.support.preferences.CustomSeekBarPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -60,6 +61,7 @@ public class ClockOptions extends SettingsPreferenceFragment
     private static final String STATUSBAR_CLOCK_DATE_STYLE = "clock_date_style";
     private static final String STATUSBAR_CLOCK_DATE_FORMAT = "clock_date_format";
     private static final String STATUSBAR_CLOCK_DATE_POSITION = "statusbar_clock_date_position";
+    private static final String QS_HEADER_CLOCK_SIZE  = "qs_header_clock_size";
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
@@ -72,6 +74,7 @@ public class ClockOptions extends SettingsPreferenceFragment
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
     private ListPreference mClockDatePosition;
+    private CustomSeekBarPreference mQsClockSize;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -152,6 +155,12 @@ public class ClockOptions extends SettingsPreferenceFragment
         mClockDatePosition.setValue(String.valueOf(clockDatePosition));
         mClockDatePosition.setSummary(mClockDatePosition.getEntry());
         mClockDatePosition.setOnPreferenceChangeListener(this);
+
+        mQsClockSize = (CustomSeekBarPreference) findPreference(QS_HEADER_CLOCK_SIZE);
+        int qsClockSize = Settings.System.getInt(resolver,
+                Settings.System.QS_HEADER_CLOCK_SIZE, 14);
+                mQsClockSize.setValue(qsClockSize / 1);
+        mQsClockSize.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -268,6 +277,11 @@ public class ClockOptions extends SettingsPreferenceFragment
               mClockDatePosition.setSummary(mClockDatePosition.getEntries()[index]);
               parseClockDateFormats();
               return true;
+        }  else if (preference == mQsClockSize) {
+                int width = ((Integer)newValue).intValue();
+                Settings.System.putInt(resolver,
+                        Settings.System.QS_HEADER_CLOCK_SIZE, width);
+                return true;
         	}
       	  return false;
     }
