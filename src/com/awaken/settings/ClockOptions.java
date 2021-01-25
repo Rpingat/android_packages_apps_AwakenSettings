@@ -61,6 +61,7 @@ public class ClockOptions extends SettingsPreferenceFragment
     private static final String STATUSBAR_CLOCK_DATE_STYLE = "clock_date_style";
     private static final String STATUSBAR_CLOCK_DATE_FORMAT = "clock_date_format";
     private static final String STATUSBAR_CLOCK_DATE_POSITION = "statusbar_clock_date_position";
+    private static final String STATUS_BAR_CLOCK_SIZE  = "status_bar_clock_size";
     private static final String QS_HEADER_CLOCK_SIZE  = "qs_header_clock_size";
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
@@ -74,6 +75,7 @@ public class ClockOptions extends SettingsPreferenceFragment
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
     private ListPreference mClockDatePosition;
+    private CustomSeekBarPreference mClockSize;
     private CustomSeekBarPreference mQsClockSize;
 
     @Override
@@ -155,6 +157,12 @@ public class ClockOptions extends SettingsPreferenceFragment
         mClockDatePosition.setValue(String.valueOf(clockDatePosition));
         mClockDatePosition.setSummary(mClockDatePosition.getEntry());
         mClockDatePosition.setOnPreferenceChangeListener(this);
+
+        mClockSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_CLOCK_SIZE);
+        int clockSize = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CLOCK_SIZE, 14);
+        mClockSize.setValue(clockSize / 1);
+        mClockSize.setOnPreferenceChangeListener(this);
 
         mQsClockSize = (CustomSeekBarPreference) findPreference(QS_HEADER_CLOCK_SIZE);
         int qsClockSize = Settings.System.getInt(resolver,
@@ -277,6 +285,11 @@ public class ClockOptions extends SettingsPreferenceFragment
               mClockDatePosition.setSummary(mClockDatePosition.getEntries()[index]);
               parseClockDateFormats();
               return true;
+        }  else if (preference == mClockSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(resolver,
+                    Settings.System.STATUS_BAR_CLOCK_SIZE, width);
+            return true;
         }  else if (preference == mQsClockSize) {
                 int width = ((Integer)newValue).intValue();
                 Settings.System.putInt(resolver,
