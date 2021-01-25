@@ -22,6 +22,12 @@
         android:summary="@string/quick_settings_vibrate_summary"
         android:defaultValue="false"/>
 
+    <com.awaken.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_show_drag_handle"
+        android:title="@string/qs_show_drag_handle_title"
+        android:summary="@string/qs_show_drag_handle_summary"
+        android:defaultValue="true" />
+
     <com.awaken.support.preferences.SecureSettingListPreference
         android:key="qs_show_brightness_slider"
         android:title="@string/qs_show_brightness_slider_title"
