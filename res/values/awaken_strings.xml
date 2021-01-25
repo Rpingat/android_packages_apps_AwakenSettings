@@ -65,7 +65,7 @@
 
     <!-- QS Tint -->
     <string name="qs_bg_use_new_tint">New tint style</string>
-    <string name="qs_bg_use_new_tint_summary">Enable the new QS tint style (Requires reboot)</string>
+    <string name="qs_bg_use_new_tint_summary">Enable the new QS tint style</string>
 
     <!-- 4G icon -->
     <string name="show_fourg_icon_title">4G icon</string>
@@ -261,7 +261,7 @@
 
     <!-- QS background opacity -->
     <string name="qs_theme_category">Style</string>
-    <string name="qs_panel_alpha_title">Background opacity</string>
+    <string name="qs_panel_alpha_title">QS panel opacity</string>
 
     <!-- Center R Notification headers -->
     <string name="center_notification_headers_title">Center notification headers</string>
