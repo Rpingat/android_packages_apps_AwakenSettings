@@ -52,7 +52,6 @@ public class Statusbar extends SettingsPreferenceFragment implements
     private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
 
     private SwitchPreference mUseOldMobileType;
-    private boolean mConfigUseOldMobileType;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -62,11 +61,9 @@ public class Statusbar extends SettingsPreferenceFragment implements
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mConfigUseOldMobileType = getResources().getBoolean(com.android.internal.R.bool.config_useOldMobileIcons);
-        int useOldMobileIcons = (!mConfigUseOldMobileType ? 1 : 0);
         mUseOldMobileType = (SwitchPreference) findPreference(KEY_USE_OLD_MOBILETYPE);
         mUseOldMobileType.setChecked((Settings.System.getInt(resolver,
-                Settings.System.USE_OLD_MOBILETYPE, useOldMobileIcons) == 1));
+                Settings.System.USE_OLD_MOBILETYPE, 0) == 1));
         mUseOldMobileType.setOnPreferenceChangeListener(this);
     }
 
