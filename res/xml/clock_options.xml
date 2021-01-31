@@ -42,7 +42,7 @@
         <com.awaken.support.preferences.CustomSeekBarPreference
             android:key="qs_header_clock_size"
             android:title="@string/qs_header_clock_font_size_title"
-            android:max="28"
+            android:max="25"
             settings:min="4"
             android:defaultValue="14"
             settings:units="sp" />
