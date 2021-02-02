@@ -604,4 +604,8 @@
     <string name="network_traffic_arrow">Show arrows</string>
     <string name="network_traffic_arrow_summary">Show the network traffic indicator arrows</string>
 
+    <string name="qs_media_player_title">QS Media player</string>
+    <string name="qs_media_player_summary_on">Show media player in QS.\nRequires a SystemUI restart</string>
+    <string name="qs_media_player_summary_off">Show media player as a notification.\nRequires a SystemUI restart</string>
+
 </resources>
