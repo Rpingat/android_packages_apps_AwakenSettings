@@ -47,6 +47,12 @@
         android:title="@string/translucent_lockscreen_notifications_bg_title"
         android:defaultValue="false" />
 
+    <com.awaken.support.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_status_bar"
+        android:title="@string/lockscreen_status_bar_title"
+        android:summary="@string/lockscreen_status_bar_summary"
+        android:defaultValue="true" />
+
     <com.awaken.support.preferences.SystemSettingListPreference
         android:key="lockscreen_charging_animation_style"
         android:title="@string/lockscreen_charging_animation_title"
