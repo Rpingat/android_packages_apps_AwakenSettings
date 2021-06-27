@@ -548,6 +548,7 @@
     <string name="switch_retro">Retro</string>
     <string name="switch_telegram">Telegram</string>
     <string name="switch_stockish">Stockish</string>
+    <string name="switch_android_s">Android S</string>
 
     <!-- Lockscreen icons -->
     <string name="lockscreen_tuner_title">Lockscreen Shortcuts</string>
